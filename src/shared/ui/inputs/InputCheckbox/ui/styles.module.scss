@@ -1,0 +1,46 @@
+@import "@/app/styles/_theme";
+
+.filterOptionInputCheckbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.filterOptionTitleCheckbox {
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        color: $orange-middle;
+        &::before {
+            border-color: $orange;
+        }
+    }
+}
+
+.filterOptionTitleCheckbox::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid $grey;
+    border-radius: 5px;
+    transition: border .2s ease-in-out;
+}
+
+.filterOptionInputCheckbox:checked+.filterOptionTitleCheckbox {
+    color: $orange-middle;
+}
+
+.filterOptionInputCheckbox:checked+.filterOptionTitleCheckbox::before {
+    border-color: $orange;
+    background-image: url("@/shared/assets/images/check.svg");
+}

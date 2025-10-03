@@ -1,0 +1,50 @@
+@import "@/app/styles/_theme";
+
+.tableContainer {
+    position: relative;
+    width: 100%;
+    background: $white;
+    border: 2px solid $grey-light;
+    border-radius: 10px;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: .7fr repeat(7, 1fr);
+}
+
+.headerCell {
+    background-color: $white-grey;
+    border-right: 2px solid $grey-light;
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+    @media(max-width: 1350px){
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+.headerCell:nth-child(3) {
+    grid-column: span 2;
+}
+
+.headerCell:last-child {
+    border-right: none;
+}
+
+.searchMessage {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.loadBtn {
+    display: flex;
+    justify-content: center;
+    color: $orange;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+        color: $orange-middle;
+    }
+}

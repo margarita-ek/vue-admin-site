@@ -1,0 +1,60 @@
+@import "@/app/styles/_theme";
+
+.authForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 500px;
+    padding: 32px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.authTitle {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.authBtn {
+    width: 100%;
+    background-color: $grey-dark;
+    border: none;
+    border-radius: 8px;
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;    
+    cursor: pointer;
+    padding: 12px 16px;
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active {
+        opacity: 0.9;
+    }
+    &:disabled {
+        background-color: $grey;
+        opacity: 0.8;
+    }
+}
+
+.authError {
+    color: red;
+}
+
+.inputPasswordContainer {
+    position: relative;
+}
+
+.eye {
+    right: 13px;
+    top: 35px;
+    color: $grey-dark;
+    position: absolute;
+    &:hover {
+        color: $orange;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+    }
+}

@@ -1,0 +1,32 @@
+@import "@/app/styles/_theme";
+
+.inputWrapper {
+    width: 208px;
+    height: 175px;
+    border: 1px solid $grey-light;
+    border-radius: 15px;
+    background-color: $grey-middle-light;        
+}
+
+.file {
+    display: none;
+}
+
+.label {
+    display: flex;
+    width: 208px;
+    height: 175px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    & > svg {
+        color: $white;
+        width: 50px;
+        height: 50px;
+    }
+    & > svg:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s ease; 
+    }
+}

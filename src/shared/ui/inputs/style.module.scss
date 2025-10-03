@@ -1,0 +1,40 @@
+@import "@/app/styles/_theme";
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.formLabel {
+    font-size: 16px;
+    color: $grey-dark;
+    padding-left: 4px;
+}
+
+.formInput, .formInputCell {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    &::placeholder{
+        color: $grey;
+    }
+    &:focus {
+        border: 1px solid $grey-dark;
+    }
+}
+
+.formInputCell {
+    width: 44px;
+    padding: 12px;
+}
+
+.formInput:hover,
+.formInput:active {
+    border-color: $grey;
+}

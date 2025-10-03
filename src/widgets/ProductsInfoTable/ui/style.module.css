@@ -1,0 +1,26 @@
+.tableContainer {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tableHeader {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 2fr .5fr repeat(2, 1fr);
+}
+
+.headerCell {
+    background-color: #f8f8f8;
+    border-right: 2px solid #e1e1e1;
+    text-align: center;
+    padding: 15px;
+    font-weight: 700;
+    word-break: break-all;
+}
+
+.headerCell:last-child {
+    border-right: none;
+}

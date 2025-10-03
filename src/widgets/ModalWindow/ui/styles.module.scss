@@ -1,0 +1,53 @@
+.wrapper {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    padding: 40px;
+    cursor: pointer;
+}
+
+.wrapperContent, .formWrapperContent {
+    margin: 100px 20px;
+    width: 50%;
+    background: white;
+    border-radius: 12px;
+    min-height: 50px;
+    padding: 20px 20px 20px 20px;
+    cursor: default;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        padding: 0 30px 30px 30px;
+    }
+}
+
+.wrapperContent {
+    @media(max-width: 1500px){
+        width: 70%;
+    }
+}
+
+.formWrapperContent {
+    width: 750px;
+    min-height: 70%;
+}
+
+.close {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+
+    & > svg {
+        width: 30px;
+        height: 30px;
+    }
+}

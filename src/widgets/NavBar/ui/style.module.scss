@@ -1,0 +1,98 @@
+.navbar{
+    min-width: 250px;
+    width: 250px;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    box-shadow: 2px 2px 15px #0000001a;
+    transition: .3s ease-in-out;
+    overflow: hidden;
+    z-index: 2000;
+}
+
+.navbarHidden{
+    min-width: 75px;
+    width: 75px;
+}
+
+.navbarLogo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 15px 0;
+}
+
+.logoImg{
+    width: 45px;
+}
+
+.logoTitle{
+    font-size: 18px;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.logoTitleHidden{
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.sectionList{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding-left: 30px;
+    padding-right: 25px;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.sectionIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionIcon svg{
+    width: 20px;
+    height: 20px;
+}
+
+.sectionTitle{
+    font-weight: 600;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.sectionTitleHidden{
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.selectedSection{
+    border-bottom: 1px solid #f4831d;
+}
+
+.selectedSection svg path{
+    fill: #f4831d;
+}
+
+.section:hover .sectionTitle{
+    color: #f4831d;
+}
+
+.section:hover svg path{
+    fill: #f4831d;
+}
+
+.selectedSection:hover .sectionTitle{
+    color: #000;
+}

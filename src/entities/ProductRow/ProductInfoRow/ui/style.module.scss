@@ -1,0 +1,55 @@
+.tableRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 2fr .5fr repeat(2, 1fr);
+    border-top: 2px solid #e1e1e1;
+}
+
+.cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid #e1e1e1;
+    padding: 10px;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.cell:last-child {
+    border-right: none;
+}
+
+.cell img {
+    max-width: 100px;
+}
+
+.cell button:disabled{
+    cursor: default;
+}
+
+.cellStart {
+    align-items: start;
+}
+
+.cellTags {
+    justify-content: space-between;
+    align-items: start;
+}
+
+.cellLink:hover{
+    color: #f4831d;
+    text-decoration: underline;
+}
+
+.tagsList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag{
+    padding: 3px 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 12px;
+}

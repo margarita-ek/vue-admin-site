@@ -1,0 +1,62 @@
+@import "@/app/styles/_theme";
+
+.authMenu {
+    position: relative;
+}
+
+.authInitials {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #575757;
+    color: $white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.authMenuModal {
+    position: absolute;
+    right: 0;
+    top: 108%;
+    z-index: 1000;
+}
+
+.authModalList {
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+    list-style: none;
+    margin: 0;
+    padding: 12px;
+}
+
+.authModalItem {
+    margin-bottom: 8px;
+    color: $black;
+    cursor: default;
+    white-space: nowrap;
+}
+
+.authModalItemBold {
+    font-weight: 600;
+}
+
+.authModalItemExit {
+    color: $orange-middle;
+    cursor: pointer;
+    &:hover {
+        color: $orange;
+    }
+}
+
+.authModalItem:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,268 @@
+@import "@/app/styles/_theme";
+
+.formContainer {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $grey-light;
+    align-items: start;
+}
+
+.titleContainer {
+    width: 70%;
+    @media(max-width: 1240px){
+        width: 100%;
+    }
+    input {
+        font-weight: 600;
+    }    
+}
+
+.menu {
+    margin: 20px 0;
+}
+
+.menuContainer {
+    display: grid;
+    grid-template-areas: 'topBlock' 'bottomBlock';
+    grid-row-gap: 10px;
+    grid-column-gap: 30px;
+    justify-content: start;
+    align-items: center;
+}
+
+.topBlock {
+    grid-area: topBlock;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    grid-column-gap: 20px;
+}
+
+.menuTitle, .menuTitleDate {
+    padding-left: 8px;
+    font-size: 14px;
+    color: $grey-dark;
+}
+
+.menuTitleDate {
+    padding-left: 4px;
+}
+
+.filterOptionInputCheckbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.filterOptionTitleCheckbox {
+    position: relative;
+    padding-left: 30px;
+    display: inline-block;
+    cursor: pointer;
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        color: $orange-middle;
+    }
+}
+
+.filterOptionTitleCheckbox::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid $grey;
+    border-radius: 5px;
+    transition: border .2s ease-in-out;
+}
+
+.filterOptionInputCheckbox:checked + .filterOptionTitleCheckbox {
+    color: $orange-middle;
+}
+
+.filterOptionInputCheckbox:checked + .filterOptionTitleCheckbox::before {
+    border-color: $orange;
+    background-image: url("@/shared/assets/images/check.svg");
+}
+
+.btnContainer {
+    margin-top: 10px;
+    margin-bottom: 36px;
+    margin-left: 26px;
+}
+
+.tab {
+    border: 1px solid $grey;
+    color: $grey;
+    border-bottom: none;
+    padding: 10px;
+    position: relative;
+    background-color: $white;
+    background-color: $white-grey;
+
+    &:hover {
+        color: $black;
+        transition: color 0.3s ease-in-out;
+    }
+
+    &:first-child {
+        border-radius: 15px 0 0 0;
+    }
+    &:nth-child(3) {
+        border-radius: 0 15px 0 0;
+    }
+}
+
+.activeTab {
+    color: $black;
+    border-color: $grey;
+    border-bottom: none;
+    z-index: 1;
+    background-color: $white;
+}
+
+.tabsContainer {
+    margin-top: 20px;
+}
+
+.tabContainer {
+    border: 1px solid $grey;
+    border-radius: 0 10px 10px 10px;
+    top: -1px;
+    position: relative;
+    padding: 20px;
+    width: 70%;
+    @media(max-width: 1500px) {
+        width: 100%;
+    }
+}
+
+
+.edited {
+    input, textarea, button {
+        border-color: $green !important;
+        &:focus {
+            border-color: $green !important;            
+        }
+    }
+}
+
+.filtersContainer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rubricBlock {
+    margin-left: 6px;
+}
+
+.filters {
+    display: flex;
+}
+
+.publish {
+    display: flex;
+    align-items: center;
+}
+
+.descBlock {
+    margin-top: 6px;
+}
+
+.seoBlock {
+    margin-top: 10px;
+    display: grid;
+    grid-template: repeat(3, auto) / repeat(2, 1fr);
+    gap: 10px;
+}
+
+.slugBlock {
+    position: relative;
+}
+
+.autoClue {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 600;
+    color: $orange;
+    cursor: pointer;
+
+    &:hover{
+        color: $orange-middle;
+    }
+}
+
+.clue {
+    margin-left: 5px;
+    font-weight: 600;
+    color: $orange;
+    cursor: pointer;
+    &:hover{
+        color: $orange-middle;
+    }
+}
+
+.blockWithHint {
+    position: relative;
+}
+
+.imagesBlock {
+    margin-top: 20px;
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.imagesBlockCell {
+    margin-top: 20px;
+    padding-right: 40px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template: 1fr/repeat(auto-fit,minmax(208px,208px));
+}
+
+.galleryContainer {
+    position: relative;
+}
+
+.displayContainer {
+    width: 30px;
+    position: absolute;
+    top: -14px;
+    right: 0;
+    z-index: 100;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: $orange;
+
+    svg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    svg>rect {
+        fill: $orange;
+        transition: .2s ease-in-out;
+    }
+
+    &:hover {
+        color: $orange-middle;
+        transition: color .2s ease-in-out;
+
+        svg>rect {
+            fill: $orange-middle;
+            transition: .2s ease-in-out;
+        }
+    }
+}

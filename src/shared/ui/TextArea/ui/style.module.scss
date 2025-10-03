@@ -1,0 +1,36 @@
+@import "@/app/styles/_theme";
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formLabel {
+    font-size: 16px;
+    color: $grey-dark;
+    padding-left: 4px;
+}
+
+.formTextarea {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    width: 100%;
+    height: 140px;
+    padding: 12px 40px 12px 12px;
+    font-size: 17px;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s ease-in-out;
+    &::placeholder{
+        color: $grey;
+    }
+    &:focus {
+        border: 1px solid $grey-dark;
+    }
+}
+
+.formTextarea:hover,
+.formTextarea:active {
+    border-color: $grey;
+}

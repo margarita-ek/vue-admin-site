@@ -1,0 +1,36 @@
+@import "@/app/styles/_theme";
+
+.menuButton{
+    padding: 7px;
+    background-color: $white-grey;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    &:hover {
+        background-color: $white-grey-middle;
+    }
+}
+
+.menuItems{
+    position: absolute;
+    right: -1px;
+    top: 105%;
+    width: 150px;
+    background: $white;
+    border: 1px solid $grey-light;
+    border-radius: 4px;
+    z-index: 10;
+    max-height: 500px;
+    overflow: auto;
+}
+
+.menuItem{
+    padding: 5px 10px;
+    cursor: pointer;
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}
+
+.menuItemActive{
+    background-color: $white-grey;
+}

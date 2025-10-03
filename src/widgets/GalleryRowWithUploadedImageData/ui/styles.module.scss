@@ -1,0 +1,55 @@
+@import "@/app/styles/_theme";
+
+.wrapper {
+    display: grid;
+    grid-template: auto / auto 1fr;
+    grid-column-gap: 10px;
+}
+
+.inputsContainer {
+    position: relative;
+    display: grid;
+    align-content: space-between;
+}
+
+.positionContainer{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    bottom: 10px;
+    left: 10px;
+    z-index: 5;
+
+    & > div > input {
+        width: auto;
+        padding: 7px 6px;
+        border-radius: 5px;
+        width: 36px;
+        text-align: center;
+    }
+
+    & > p {
+        margin-right: 10px;
+    }
+}
+
+.label {
+    margin-right: 10px;
+    font-size: 16px;
+    color: $grey-dark;
+    padding-left: 4px;    
+}
+
+.blockWithHint {
+    position: relative;
+}
+
+.clue {
+    margin-left: 5px;
+    font-weight: 600;
+    color: $orange;
+    cursor: pointer;
+    &:hover{
+        color: $orange-middle;
+    }
+}

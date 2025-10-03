@@ -1,0 +1,43 @@
+@import "@/app/styles/_theme";
+
+.searchBlock {
+    position: relative;
+    margin: 4px;
+    width: 350px;
+    display: flex;
+    height: 36px;
+}
+
+.searchInput {
+    border: 1px solid $grey-light;
+    border-radius: 10px;
+    width: 100%;
+    padding: 8px 35px 8px 12px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color .3s ease-in-out;
+}
+
+
+.searchBtn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.searchBtn path {
+    fill: $grey-middle-light;
+}
+
+.removeBtn {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: pointer;
+}
+
+.searchInput:hover, .searchInput:active {
+    border-color: $grey;
+}

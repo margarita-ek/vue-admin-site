@@ -1,0 +1,37 @@
+@import "@/app/styles/_theme";
+
+.wrapper {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $white;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.title {
+    font-size: 40px;
+    color: $black;
+}
+
+.notFound {
+    font-size: 70px;
+    color: $red;
+    font-weight: 600;
+    border-top: 1px solid #e1e1e1;
+    margin-bottom: 30px;
+}
+
+.btnNotFound {
+    align-self: flex-start;
+}

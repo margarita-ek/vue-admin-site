@@ -1,0 +1,31 @@
+.formBlock{
+    margin-bottom: 25px;
+}
+
+.formBlock:last-child{
+    margin-bottom: 0;
+}
+
+.formBlockTitle{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.formControls{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.bottomBtn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+.bottomBtn button:disabled{
+    background: #9a9a9a;
+    cursor: not-allowed;
+}
